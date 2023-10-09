@@ -14,11 +14,24 @@
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+    height: 70px;
 }
-.headind_menu{
+.headind_menu_1{
     border: 2px solid green;
     border-radius: 10px;
     list-style-type: none;
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    width: 600px;
+}
+.headind_menu_2{
+    border: 2px solid green;
+    border-radius: 10px;
+    list-style-type: none;
+    display: flex;
+    width: 200px;
+}
+.headind_menu_txt{
+    
 }
