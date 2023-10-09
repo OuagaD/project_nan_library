@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Inria Serif', serif;
+    /* font-family: 'MonteCarlo', cursive; */
+}
+
+.headind{
+    border: 2px solid red;
+    height: 250px;
+}
+.headind_cont{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.headind_menu{
+    border: 2px solid green;
+    border-radius: 10px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
