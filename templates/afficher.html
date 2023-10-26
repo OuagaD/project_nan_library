@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher</title>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Email</th>
+        </thead>
+        {% for user in users %}
+        <tbody>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td><a href="{{ url_for('modifierpage', id=user.id) }}">Modifier</a></td>
+            <td><a href="{{url_for('supprimer', id=user.id)}}">supprimer</a></td>
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+</html>

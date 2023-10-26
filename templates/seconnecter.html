@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Se_connecter</title>
+</head>
+<body class="bodconx">
+    <div class="conx_cont">
+        <div class="conx_lg_ins"></div>
+        <form action="/connect" method="post" class="conx_inp">
+            <input type="email" name="email" placeholder="Identifiant" id="" class="conx_ind" required><br>
+            <input type="password" name="motpass" placeholder="Mot de passe" id="" class="conx_mtpss"><br><br>
+            <input type="submit" value="Se connecter" class="conx_btn">
+        </form>
+        <div class="conx_redic_ins">
+            <p class="conx_redic_ins_txt">Vous n’avez pas de compte? <a href="" class="conx_redic_ins_txtins">S’incrire</a></p>
+        </div>
+    </div>
+</body>
+</html>

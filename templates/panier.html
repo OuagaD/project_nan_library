@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Mon_espace</title>
+</head>
+<body>
+    <header class="espachead">
+        <nav class="headind_cont">
+            <ul class="headind_menu_1">
+                <li class="headind_menu_txt"><a href="{{ url_for('publications') }}">Publications</a></li>
+                <li class="headind_menu_txt"><a href="{{ url_for('monespace') }}">Mon espace</a></li>
+                <li class="headind_menu_txt" class="menhover" style="color: #9C66E1;"><a href="#">Panier</a></li>
+                <li class="headind_menu_txt"><a href="{{ url_for('apropos') }}">A propos</a></li>
+            </ul>
+            <ul class="headind_menu_2">
+            <div class="espachead_prof">
+                <div class=""></div>
+            </div>
+            </ul>
+        </nav>
+    </header>
+    <main class="panier_main">
+        <section class="">
+            <div class=""></div>
+        </section>
+    </main>
+</body>
+<footer>
+    <div class="foot_ind_cont">
+        <div class="foot_ind_cont_txtcopcont">
+            <p class="foot_ind_cont_txtcop">Copyright © 2023 JLO_art - Tous droits réservés</p>
+            <p class="foot_ind_cont_txtcont">Nous contacter | Politique de  confidentialité | Nos partenaires | Qui sommes-nous?</p><br>
+        </div>
+        <div class="foot_ind_cont_rs">
+            <p class="foot_ind_rs_txt">Suivez-nous:</p>
+            <div class="foot_ind_cont_rs_img">
+                <div class="foot_ind_rs_img_insta"></div>
+                <div class="foot_ind_rs_img_facebk"></div>
+                <div class="foot_ind_rs_img_linked"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

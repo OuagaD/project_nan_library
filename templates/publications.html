@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inria+Serif&family=MonteCarlo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Publications</title>
+</head>
+<body>
+    <header class="espachead">
+        <nav class="headind_cont">
+            <ul class="headind_menu_1">
+                <!-- <li class="headind_menu_txt">Accueil</li> -->
+                <li class="headind_menu_txt" class="menhover" style="color: #9C66E1;"><a href="#">Publications</a></li>
+                <li class="headind_menu_txt"><a href="{{ url_for('monespace') }}">Mon espace</a></li>
+                <li class="headind_menu_txt"><a href="{{ url_for('panier') }}">Panier</a></li>
+                <li class="headind_menu_txt"><a href="{{ url_for('apropos') }}">A propos</a></li>
+            </ul>
+            <ul class="headind_menu_2">
+                <div class="espachead_prof">
+                    <div class=""></div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main class="pub_sect">
+        <!-- <fieldset>
+            <legend>
+                fichiers images
+            </legend>
+            <form action="/pubmodif" method="post" enctype="multipart/form-data">
+                <input type="file" name="pic" id="">
+                <input type="submit" value="Enregistrer">
+            </form>
+        </fieldset> -->
+        {% for pub in pubs %}
+        <div class="pub_sect_cont">
+            <div class="pub_sect_toil">
+                <button class="pub_sect_btnaff">Afficher</button>
+            </div>
+            <div class="pub_sect_cont_txt">
+                <p class="pub_sect_txt_nom">Nom : <span class="pub_sect_txt_nomval">{{ pub.namepainter }}</span></p>
+                <p class="pub_sect_txt_prix">Prix : <span class="pub_sect_txt_prixval">{{ pub.price }}</span></p>
+                <div class="pub_sect_cont_des">
+                    <p class="pub_sect_txt_des">Description :</p>
+                    <div class="pub_sect_cont_desbtntxt">
+                        <div class="pub_sect_txt_destxt">{{ pub.description }}</div>
+                        <button class="pub_sect_txt_desbtn">Acheter</button>
+                        <button class="pub_sect_txt_desbtn">Panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+<footer>
+    <div class="foot_ind_cont">
+        <div class="foot_ind_cont_txtcopcont">
+            <p class="foot_ind_cont_txtcop">Copyright © 2023 JLO_art - Tous droits réservés</p>
+            <p class="foot_ind_cont_txtcont">Nous contacter | Politique de  confidentialité | Nos partenaires | Qui sommes-nous?</p>
+        </div>
+        <div class="foot_ind_cont_rs">
+            <p class="foot_ind_rs_txt">Suivez-nous:</p>
+            <div class="foot_ind_cont_rs_img">
+                <div class="foot_ind_rs_img_insta"></div>
+                <div class="foot_ind_rs_img_facebk"></div>
+                <div class="foot_ind_rs_img_linked"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

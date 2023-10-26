@@ -1,0 +1,886 @@
+*{
+    margin: 0;
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Inria Serif', serif;
+    color: white;
+    /* font-family: 'MonteCarlo', cursive; */
+}
+a{
+    text-decoration: none;          
+}
+
+.headind{
+    height: 600px;
+    background-image: url('./img_library/linsaac-la-celebre-ecole-ivoirienne-des-arts-fait-peau-neuve.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.headind_cont{
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+}
+.headind_menu_1{
+    border-radius: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+}
+.headind_menu_2{
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    width: 250px;
+}
+.headind_menu_txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #9C66E1;
+    background-color: rgba(0, 0, 0, 0.701);
+    border-radius: 10px;
+    height: 30px;
+    width: 130px;
+    font-size: 1.3em;
+}
+.menhover:hover{
+    background-color: #9C66E1;
+    color: white;
+}
+.headind_menu_txt:hover{
+    background-color: #9C66E1;
+}
+.headind_menu_txt_ins{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #9C66E1;
+    background-color: rgba(0, 0, 0, 0.701);
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+.headind_menu_txt_ins:hover{
+    background-color: #9C66E1;
+}
+.headind_menu_txt_conx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #9C66E1;
+    background-color: rgba(0, 0, 0, 0.701);
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+.headind_menu_txt_conx:hover{
+    background-color: #9C66E1;
+}
+.headind_jlotxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.headind_jlotxt_art{
+    border: 2px solid #9C66E1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.701);
+    font-size: 1.5em;
+}
+
+.indpart1{
+    background-color: #B5CBEA;
+    
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.indpart1_pub{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500PX;
+    height: 300px;
+}
+.indpart1_pub_txt_title{
+    font-size: 4em;
+}
+.indpart1_pub_txt_text{
+    background-color: #83A1CD;
+    width: 480px;
+    height: 160px;
+    font-size: 1.8em;
+}
+.indpart1_tab{
+    position: relative;
+    width: 750px;
+    height: 500px;
+}
+.indpart1_tab1{
+    position: relative;
+    background-image: url('./img_library/peinture\ abstraite\ moderne\ bleue.jpg');
+    background-size: cover;
+    height: 270px;
+    width: 335px;
+    top: 20px;
+    left: 10px;
+}
+.indpart1_tab2{
+    position: relative;
+    background-image: url('./img_library/peinture-abstraite-moderne_2.jpg');
+    background-size: cover;
+    height: 260px;
+    width: 380px;
+    bottom: 90px;
+    left: 200px;
+}
+.indpart1_tab3{
+    position: relative;
+    background-image: url('./img_library/tableau-peinture-abstraite-lion.jpg');
+    background-size: cover;
+    height: 320px;
+    width: 280px;
+    bottom: 480px;
+    left: 450px;
+}
+.indpart2_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 550px;
+}
+.indpart2_txt{
+    border: 3px solid #6B8CBD;
+    height: 65px;
+    width: 650px;
+    background-color: #B5CBEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em;
+    border-radius: 25px;
+
+}
+.indpart2_cont_peint{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.indpart2_peint1{
+    border: 5px dashed #84A6DB;
+    height: 300px;
+    width: 380px;
+    background-image: url('./img_library/aboudia.jpg');
+    background-size: cover;
+}
+.indpart2_peint2{
+    border: 5px dashed #84A6DB;
+    height: 300px;
+    width: 380px;
+    background-image: url('./img_library/Sliue-Joachim.jpg');
+    background-size: cover;
+}
+.indpart2_peint3{
+    border: 5px dashed #84A6DB;
+    height: 300px;
+    width: 380px;
+    background-image: url('./img_library/Mounou-Desire.webp');
+    background-size: cover;
+}
+.indpart3{
+    background-color: red;
+    background-image: url('./img_library/b1a764e9529838ab8dabfa8a1228c3f449d8020625602a47d78d960da5cfaaa9.webp');
+    background-size: cover;
+    height: 1700px;
+}
+.indpart3_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.indpart3_cont_txt{
+    font-family: 'Maiden Orange', serif;
+    font-size: 3em;
+}
+.indpart3_imgpart{
+     
+    height: 1500px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.indpart3_imgpart1{
+    border-radius: 25px;
+    height: 400px;
+    width: 1000px;
+    background-image: url('./img_library/ceremonie-d-inauguration-du-parc-des-expositions-d-abidjan-presidee-par-le-_0dlualhwne3w.jpeg');
+    background-size: cover;
+}
+.indpart3_imgpart2{
+    border-radius: 25px;
+    height: 400px;
+    width: 1000px;
+    background-image: url('./img_library/insaac.jpeg');
+    background-size: cover;
+}
+.indpart3_imgpart3{
+    border-radius: 25px;
+    height: 500px;
+    width: 1000px;
+    background-image: url('./img_library/MECI.png');
+    background-size: cover;
+}
+
+.foot_ind_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    height: 150px;
+}
+.foot_ind_cont_txtcopcont{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+}
+.foot_ind_cont_rs{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    font-size: 1.2em;
+}
+.foot_ind_cont_rs_img{
+    display: flex;
+}
+.foot_ind_rs_img_insta{
+    background-image: url('./img_library/instagram\ \(2\).png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+.foot_ind_rs_img_facebk{
+    background-image: url('./img_library/facebook\ \(1\).png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+.foot_ind_rs_img_linked{
+    background-image: url('./img_library/linkedin.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
+
+
+
+/***************************se connecter*******************************/
+.bodconx{
+    background: url('./img_library/20190210160618jpg_5c6072490e428.jpeg')100% no-repeat;
+    background-size: cover;
+    height: 800px;  
+    width: 100%;
+    overflow: hidden;
+    font-size: 2em;
+}
+.conx_cont{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 740px;
+}
+.conx_lg_ins{
+    
+    height: 250px;
+    width: 250px;
+    background-image: url('./img_library/compte1.png');
+    background-size: cover;
+}
+.conx_inp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    height: 380px;
+}
+.conx_ind{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 700px;
+}
+.conx_ind::placeholder{
+    color: white;
+    opacity: 1;
+}
+.conx_mtpss{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 700px;
+}
+.conx_mtpss::placeholder{
+    color: white;
+    opacity: 1;
+}
+.conx_btn{
+    border: 4px solid #91C936;
+    border-radius: 20px;
+    background-color: #71bc4fc4;
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 300px;
+}
+.conx_redic_ins{
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 500px;
+}
+.conx_redic_ins_txt{
+    font-size: 0.9em;
+}
+.conx_redic_ins_txtins{
+    color: #91C936;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+
+
+/*********************************Inscription************************************/
+.bodins{
+    background: url('./img_library/FB980A63E92C4B409C8E1D36F5F5255Fjpeg_61eec55f4db23.jpeg')100% no-repeat;
+    background-size: cover;
+    height: 800px;  
+    width: 100%;
+    overflow: hidden;
+    font-size: 2em;
+}
+.ins_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+}
+.ins_txt{
+    font-size: 1.7em;
+}
+.ins_form{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.ins_align{
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+}
+.ins_form_nom{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 400px;
+}
+.ins_form_nom::placeholder{
+    color: white;
+    opacity: 1;
+}
+.ins_form_prenom{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 700px; 
+    margin-right: 23px;
+}
+.ins_form_prenom::placeholder{
+    color: white;
+    opacity: 1;
+}
+.ins_form_email{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 700px; 
+}
+.ins_form_email::placeholder{
+    color: white;
+    opacity: 1;
+}
+.ins_form_contact{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 400px; 
+}
+.ins_form_contact::placeholder{
+    color: white;
+    opacity: 1;
+}
+.ins_form_motpass{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 550px; 
+}
+.ins_form_motpass::placeholder{
+    color: white;
+    opacity: 1;
+}
+.ins_form_confirmotpass{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 550px; 
+}
+.ins_form_confirmotpass::placeholder{
+    color: white;
+    opacity: 1;
+}
+.ins_form_btn_cont{
+    display: flex;
+    justify-content: center;
+}
+.ins_form_btn{
+    border: 4px solid #91C936;
+    border-radius: 20px;
+    background-color: #71bc4fc4;
+    font-size: 1.5em;
+    color: white;
+    height: 80px;
+    width: 300px; 
+}
+.ins_redic_conx{
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 500px;
+}
+.ins_redic_conx_txt{
+    font-size: 0.9em;
+}
+.ins_redic_conx_txtconx{
+    color: #91C936;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+
+
+
+
+/********************************Publications************************************/
+.headpub{
+    height: 50px;
+}
+.pub_sect1{
+    border: 2px solid red;
+    background-color: #83A1CD;
+    height: 500px;
+}
+.pub_sect_cont{
+    border: 2px solid red;
+    background-color: #362653;
+    display: flex;
+    justify-content: space-around;
+    height: 450px;
+    width: 1100px;
+    font-size: 1.5em;
+    margin: 100px auto;
+}
+.pub_sect_toil{
+    border: 2px solid green;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 370px;
+    width: 470px;
+}
+.pub_sect_btnaff{
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: #91C936;
+    font-size: 1.2em;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    height: 60px;
+    width: 160px;
+}
+.pub_sect_cont_txt{
+    border: 2px solid rgb(255, 145, 0);
+    height: 450px;
+    width: 600px;
+}
+
+.pub_sect_txt_nom{
+    border: 2px solid blue;
+    height: 50px;
+    width: 350px;
+}
+
+.pub_sect_txt_prix{
+    border: 2px solid blue;
+    height: 50px;
+    width: 350px;
+}
+.pub_sect_cont_des{
+    border: 2px solid rgb(179, 255, 0);
+    display: flex;
+    height: 300px;
+    width: 550px;
+}
+.pub_sect_txt_des{
+    border: 2px solid blue;
+    height: 50px;
+    width: 150px;
+}
+
+.pub_sect_cont_desbtntxt{
+    border: 2px solid rgb(179, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 280px;
+    width: 400px;
+}
+.pub_sect_txt_destxt{
+    border: 2px solid blue;
+    border-radius: 10px;
+    height: 150px;
+    width: 350px;
+}
+
+.pub_sect_txt_desbtn{
+    border: 2px solid red;
+    background-color: #91C936;
+    font-size: 1.2em;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 60px;
+    width: 180px;
+}
+
+
+
+
+/*******************************Mon espace*******************************/
+.espachead{
+    height: 100px;
+    background-image: url('./img_library/linsaac-la-celebre-ecole-ivoirienne-des-arts-fait-peau-neuve.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Inria Serif', serif;
+}
+.espachead_prof{
+    border: #9C66E1 2px solid;
+    background-image: url('./img_library/profil.png');
+    background-size: cover;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+}
+.espac_enr_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1400px;
+}
+.espac_enr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./img_library/istockphoto-1397685995-612x612-removebg-preview.png') 100% no-repeat;
+    background-size: cover;
+    height: 1150px;
+    width: 1100px;
+}
+.espac_inp_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 800px;
+}
+.espac_nompeint{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    color: white;
+    height: 80px;
+    width: 700px;
+}
+.espac_nompeint::placeholder{
+    color: white;
+    opacity: 1;
+}
+.espac_prxtoil{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    color: white;
+    height: 80px;
+    width: 700px;
+}
+.espac_prxtoil::placeholder{
+    color: white;
+    opacity: 1;
+}
+.espac_imgtoil{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    color: white;
+    height: 80px;
+    width: 700px;
+}
+.espac_imgtoil::placeholder{
+    color: white;
+    opacity: 1;
+}
+.espac_descr{
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    color: white;
+    height: 300px;
+    width: 700px;
+}
+.espac_descr::placeholder{
+    color: white;
+    opacity: 1;
+}
+.espac_btn_cont{
+    display: flex;
+    justify-content: end;
+    width: 700px;
+}
+.espac_soum{
+    border: 4px solid #91C936;
+    border-radius: 20px;
+    background-color: #91C936;
+    font-size: 1.7em;
+    color: white;
+    height: 70px;
+    width: 200px;
+}
+.espac_ajout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+}
+.espac_ajout_ss{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 900px;
+    height: 1100px;
+}
+.espac_ajout_titl{
+    background-color: #362653;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3em;
+    font-family: 'Inria Serif', serif;;
+    color: #F2CD6B;
+    height: 85px;
+    width: 275px;
+}
+.espac_ajout_cont{
+    background-color: #362653;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 900px;
+    width: 800px;
+}
+.espac_ajout_lin1{
+    border: 2px solid #F2CD6B;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    height: 85px;
+    width: 700px;
+}
+.espac_ajout_lin1_nom{
+   
+    display: flex;
+    justify-content: center;
+    color: #F2CD6B;
+    width: 200px;
+}
+.espac_ajout_lin1_prix{
+   
+    display: flex;
+    justify-content: center;
+    color: #F2CD6B;
+    width: 200px;
+}
+.espac_ajout_lin1_descr{
+   
+    display: flex;
+    justify-content: center;
+    color: #F2CD6B;
+    width: 200px;
+}
+.espac_ajout_lin1_img{
+   
+    display: flex;
+    justify-content: center;
+    background-image: url('./img_library/voir\ \(1\).png');
+    background-size: cover;
+    width: 100px;
+    height: 80px;
+}
+
+
+
+/******************************Apropos************************************************/
+.apropos_main{
+    height: 700px;
+}
+.apropos_sect{
+position: relative;
+}
+.apropos_cont_imgtxt{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 350px;
+}
+.apropos_imgulls{
+    border: 2px solid green;
+    background-color: red;
+    background: url('./img_library/IMG.webp') 100% no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: 70px;
+    height: 500px;
+    width: 700px;
+    /* margin-right: auto; */
+    clip-path: circle(46.2% at 27% 50%);
+}
+.apropos_txt{
+    border: 2px solid #9C66E1;
+    background-color: #362653;
+    height: 150px;
+    width: 400px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+}
+.aproposfond{
+    border: 2px solid green;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.apropos_imgfond{
+    border: 2px solid red;
+    background-image: url('./img_library/avatar-1299805_960_720.png');
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+.apropos_nomfond_cont{
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 250px;
+}
+.apropos_titfond{
+    font-size: 1.2em;
+    color: black;
+}
+.apropos_nomfond{
+    font-size: 1em;
+    color: #F2CD6B;
+}
+
+
+
+/************************Panier*****************************/
+.panier_main{
+    height: 800px;
+}

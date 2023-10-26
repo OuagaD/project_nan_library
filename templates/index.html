@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maiden+Orange&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inria+Serif&family=MonteCarlo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Index.html</title>
+</head>
+<body>
+    <header class="headind">
+        <nav class="headind_cont">
+            <!-- <ul class="headind_menu_1">
+                <li class="headind_menu_txt">Accueil</li>
+                <li class="headind_menu_txt">Publications</li>
+                <li class="headind_menu_txt">Panier</li>
+                <li class="headind_menu_txt">A propos</li>
+            </ul> -->
+            <ul class="headind_menu_2">
+                <li class="headind_menu_txt_ins"><a href="{{ url_for('inscript') }}">Inscription</a></li>
+                <li class="headind_menu_txt_conx"><a href="{{ url_for('connex') }}">Se connecter</a></li>
+            </ul>
+        </nav>
+        <div class="headind_jlotxt">
+            <div class="headind_jlotxt_art">
+                <p class="">JLO_ART est une plateforme ouverte a tous les amoureux de tableau peint. Ici vous</p>
+                <p class="">pouvez  poster vos toiles, les voir ou acheter assez facilement...</p>
+            </div>
+        </div>
+    </header>
+    <main class="">
+        <section class="indpart1">
+            <div class="indpart1_pub">
+                <div class="indpart1_pub_txt_title">Publication</div>
+                <div class="indpart1_pub_txt_text">
+                    Ici vous les internautes ou potenciel client auront la possibilite de voir les diferntes toile et de les acheter s’il le desir...
+                </div>
+            </div>
+            <div class="indpart1_tab">
+                <div class="indpart1_tab1"></div>
+                <div class="indpart1_tab2"></div>
+                <div class="indpart1_tab3"></div>
+            </div>
+        </section>
+        <section class="indpart2">
+            <div class="indpart2_cont">
+                <div class="indpart2_txt">
+                    <p class="">Quelques peintres ivoirien</p>
+                </div>
+                <div class="indpart2_cont_peint">
+                    <div class="indpart2_peint1"></div>
+                    <div class="indpart2_peint2"></div>
+                    <div class="indpart2_peint3"></div>
+                </div>
+            </div>
+        </section>
+        <section class="indpart3">
+            <div class="indpart3_cont">
+                <div class="indpart3_cont_txt">Nos partenaires :</div>
+                <div class="indpart3_imgpart">
+                    <div class="indpart3_imgpart1"></div>
+                    <div class="indpart3_imgpart2"></div>
+                    <div class="indpart3_imgpart3"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <div class="foot_ind_cont">
+        <div class="foot_ind_cont_txtcopcont">
+            <p class="foot_ind_cont_txtcop">Copyright © 2023 JLO_art - Tous droits réservés</p>
+            <p class="foot_ind_cont_txtcont">Nous contacter | Politique de  confidentialité | Nos partenaires | Qui sommes-nous?</p>
+        </div>
+        <div class="foot_ind_cont_rs">
+            <p class="foot_ind_rs_txt">Suivez-nous:</p>
+            <div class="foot_ind_cont_rs_img">
+                <div class="foot_ind_rs_img_insta"></div>
+                <div class="foot_ind_rs_img_facebk"></div>
+                <div class="foot_ind_rs_img_linked"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

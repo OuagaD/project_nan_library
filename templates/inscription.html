@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Inscription</title>
+</head>
+<body class="bodins">
+    <div class="ins_cont">
+        <div class="ins_txt">
+            <p class="">Inscription</p>
+        </div>
+        <form action="/inscription" method="post" class="ins_form">
+            <div class="ins_align">
+                <input type="text" name="nom" id="" class="ins_form_nom" placeholder="Nom" required>
+                <input type="text" name="prenom" id="" class="ins_form_prenom" placeholder="Prenom" required >
+            </div>
+            <div class="ins_align">
+                <input type="email" name="email" id="" class="ins_form_email" placeholder="Email" required>
+            <input type="tel" name="contact" id="" class="ins_form_contact" placeholder="Contact"><br><br>
+            </div>
+            <div class="ins_align">
+                <input type="password" name="motpass" id="" class="ins_form_motpass" placeholder="Mot de passe" required>
+                <input type="password" name="confirmotpass" id="" class="ins_form_confirmotpass" placeholder="Confirmer le mot de passe" required><br><br>
+            </div>
+            <div class="ins_form_btn_cont">
+                <button type="submit" value="S'inscrire" class="ins_form_btn">S'inscrire</button>
+            </div>
+        </form>
+        <div class="ins_redic_conx">
+            <p class="ins_redic_conx_txt">Vous avez un compte? <a href="" class="ins_redic_conx_txtconx">Se connecter</a></p>
+        </div>
+    </div>
+</body>
+</html>
