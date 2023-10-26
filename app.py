@@ -281,6 +281,10 @@ def apropos():
     return render_template('apropos.html')
 
 
+@app.route('/monespace', methods=['GET'])
+def monespace():
+    return render_template('monespace.html')
+
 
 
 
