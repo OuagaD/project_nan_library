@@ -10,6 +10,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.secret_key = "super secret key"
 db = SQLAlchemy(app)
 
+
+
+
+
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
@@ -257,6 +262,30 @@ def soumettre():
         db.session.commit()
         return redirect('/monespace')
     return render_template('monespace.html')
+
+
+
+@app.route('/', methods=['POST'])
+def upload_image():
+	if 'file' not in request.files:
+		flash('No file part')
+		return redirect(request.url)
+	file = request.files['file']
+	if file.filename == '':
+		flash('No image selected for uploading')
+		return redirect(request.url)
+	if file and allowed_file(file.filename):
+		filename = secure_filename(file.filename)
+		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+		#print('upload_image filename: ' + filename)
+		flash('Image successfully uploaded and displayed below')
+		return render_template('upload.html', filename=filename)
+	else:
+		flash('Allowed image types are -> png, jpg, jpeg, gif')
+		return redirect(request.url)
+
+
+
 
 
     
