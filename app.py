@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
-
+app.secret_key = "super secret key"
 db = SQLAlchemy(app)
 
 class User(db.Model):
@@ -40,12 +40,14 @@ class Myspace(db.Model):
     price = db.Column(db.Integer)
     #picpaint = db.Column(db.LargeBinary)
     description = db.Column(db.String(200))
+    mail = db.Column(db.String(120))
     
-    def __init__(self, namepainter, price, description):
+    def __init__(self, namepainter, price, description, mail):
         self.namepainter = namepainter
         self.price = price
         #self.picpaint = picpaint
         self.description = description
+        self.mail = mail
         
 
 
@@ -96,8 +98,9 @@ def seconnecter():
         email= request.form.get('email')
         password= request.form.get('motpass')
         user = User.query.filter_by(email=email, password=password).first()
-        print(user)
         if user:
+            session['email'] = user.email
+            session['password'] = user.password
             #flash("Connexion reussie")
             return redirect("/publications")
     return render_template('seconnecter.html')
@@ -237,7 +240,7 @@ def imgaff():
 #Mon espace
 @app.route('/monespace', methods=['GET']) 
 def monespace():
-    spaces = Myspace.query.all()
+    spaces = Myspace.query.filter_by(mail=session['email']).all()
     return render_template('monespace.html', spaces=spaces)
 
 #Soumettre des elements dans la db Myspace
@@ -248,7 +251,8 @@ def soumettre():
         price = request.form.get('prixtoil')
         #picpaint = request.files['imgtoil']
         description = request.form.get('description')
-        new_myspace = Myspace(namepainter, price, description)
+        mail = session['email']
+        new_myspace = Myspace(namepainter, price, description, mail)
         db.session.add(new_myspace)
         db.session.commit()
         return redirect('/monespace')
