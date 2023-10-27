@@ -23,9 +23,11 @@
                 <li class="headind_menu_txt"><a href="{{ url_for('apropos') }}">A propos</a></li>
             </ul>
             <ul class="headind_menu_2">
-                <div class="espachead_prof">
-                    <div class=""></div>
-                </div>
+                <a href="{{ url_for('deconnexion') }}">
+                    <div class="espachead_prof">
+                        <div class=""></div>
+                    </div>
+                </a>    
             </ul>
         </nav>
     </header>
@@ -42,7 +44,8 @@
         {% for pub in pubs %}
         <div class="pub_sect_cont">
             <div class="pub_sect_toil">
-                <button class="pub_sect_btnaff">Afficher</button>
+                <img src="{{ url_for('static', filename='uploads/' + pub.filename) }}" class="pub_sect_img_upl" alt="">
+                <input type="submit" value="Afficher" name="" id="" class="pub_sect_btnaff">
             </div>
             <div class="pub_sect_cont_txt">
                 <p class="pub_sect_txt_nom">Nom : <span class="pub_sect_txt_nomval">{{ pub.namepainter }}</span></p>
@@ -51,8 +54,10 @@
                     <p class="pub_sect_txt_des">Description :</p>
                     <div class="pub_sect_cont_desbtntxt">
                         <div class="pub_sect_txt_destxt">{{ pub.description }}</div>
-                        <button class="pub_sect_txt_desbtn">Acheter</button>
-                        <button class="pub_sect_txt_desbtn">Panier</button>
+                        <input type="submit" value="Acheter" name="" id=""  class="pub_sect_txt_desbtn">
+                        <form action="{{ url_for('panierpost', id=pub.id) }}" method="post">
+                            <input type="submit" value="Panier" name="" id=""  class="pub_sect_txt_desbtn">
+                        </form>
                     </div>
                 </div>
             </div>

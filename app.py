@@ -1,4 +1,5 @@
-from io import BytesIO
+import os
+import urllib.request
 from flask import Flask, render_template, redirect, url_for, flash, request, send_file, Response, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
@@ -10,7 +11,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.secret_key = "super secret key"
 db = SQLAlchemy(app)
 
+##########################
+UPLOAD_FOLDER = 'static/uploads/'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
+
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
+
+def allowed_file(filename):
+	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+##########################
 
 
 
@@ -46,16 +57,25 @@ class Myspace(db.Model):
     #picpaint = db.Column(db.LargeBinary)
     description = db.Column(db.String(200))
     mail = db.Column(db.String(120))
+    filename = db.Column(db.String(120))
     
-    def __init__(self, namepainter, price, description, mail):
+    def __init__(self, namepainter, price, description, mail, filename):
         self.namepainter = namepainter
         self.price = price
         #self.picpaint = picpaint
         self.description = description
         self.mail = mail
+        self.filename = filename
         
 
+class Basket(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(80))
+    idspace = db.Column(db.Integer)
 
+    def __init__(self, email, idspace):
+        self.email = email
+        self.idspace = idspace
     
 
 
@@ -254,25 +274,47 @@ def soumettre():
     if request.method == 'POST':
         namepainter= request.form.get('nompein')
         price = request.form.get('prixtoil')
-        #picpaint = request.files['imgtoil']
+        #filepicpaint = request.files['imgtoil']
         description = request.form.get('description')
         mail = session['email']
-        new_myspace = Myspace(namepainter, price, description, mail)
+
+        file = request.files['imgtoil']
+        if file.filename == '':
+            flash('No image selected for uploading')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            flash('Image successfully uploaded and displayed below')
+        new_myspace = Myspace(namepainter, price, description, mail, filename)
         db.session.add(new_myspace)
         db.session.commit()
         return redirect('/monespace')
     return render_template('monespace.html')
 
 
-
-
-
+@app.route('/imgtst')
+def imgtst():
+    return render_template('testimg.html')
 
 
     
 @app.route('/panier', methods=['GET'])
-def panier(): 
-    return render_template('panier.html')
+def panier():
+    pubs = Myspace.query.filter_by(mail=session['email']).all()
+    return render_template('panier.html', pubs=pubs)
+
+@app.route('/panierpost/<int:id>', methods=['POST', 'GET'])
+def panierpost(id): 
+    if request.method == 'POST':
+        print(session['email'])
+        email = session['email']
+        idspace = id
+        new_basket = Basket(email, idspace)
+        db.session.add(new_basket)
+        db.session.commit()
+        return redirect('/publications')
+    return render_template('publications.html')
 
 
 
@@ -281,7 +323,11 @@ def apropos():
     return render_template('apropos.html')
 
 
-
+@app.route('/deconnexion', methods=['GET'])
+def deconnexion(): 
+    session.pop('email', None)
+    session.pop('password', None)
+    return redirect('/')
 
 
 if __name__ == "__main__":

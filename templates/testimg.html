@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE</title>
+</head>
+<body>
+    {% if filename %}
+        {% with messages = get_flashed_messages() %}
+        <p class="msg">{{ messages }}"></p>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="">
+        {% endwith %}
+    {% endif %}
+    <form action="/imgtst" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id=""><br>
+        <input type="submit" value="Soumettre" name="" id="">
+    </form>
+</body>
+</html>

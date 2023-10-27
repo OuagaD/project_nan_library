@@ -534,12 +534,12 @@ a{
     height: 50px;
 }
 .pub_sect1{
-    border: 2px solid red;
+    
     background-color: #83A1CD;
     height: 500px;
 }
 .pub_sect_cont{
-    border: 2px solid red;
+    
     background-color: #362653;
     display: flex;
     justify-content: space-around;
@@ -549,15 +549,24 @@ a{
     margin: 100px auto;
 }
 .pub_sect_toil{
-    border: 2px solid green;
+    position: relative;
+    z-index: 0;
+    
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     height: 370px;
     width: 470px;
 }
+.pub_sect_img_upl{
+    background-size: cover;
+    height: 370px;
+    width: 470px;
+}
 .pub_sect_btnaff{
-    border: 2px solid blue;
+    position: absolute;
+    z-index: 1;
+    border: 2px solid #7fca07;
     border-radius: 10px;
     background-color: #91C936;
     font-size: 1.2em;
@@ -567,36 +576,36 @@ a{
     width: 160px;
 }
 .pub_sect_cont_txt{
-    border: 2px solid rgb(255, 145, 0);
+    
     height: 450px;
     width: 600px;
 }
 
 .pub_sect_txt_nom{
-    border: 2px solid blue;
+    
     height: 50px;
     width: 350px;
 }
 
 .pub_sect_txt_prix{
-    border: 2px solid blue;
+    
     height: 50px;
     width: 350px;
 }
 .pub_sect_cont_des{
-    border: 2px solid rgb(179, 255, 0);
+    
     display: flex;
     height: 300px;
     width: 550px;
 }
 .pub_sect_txt_des{
-    border: 2px solid blue;
+    
     height: 50px;
     width: 150px;
 }
 
 .pub_sect_cont_desbtntxt{
-    border: 2px solid rgb(179, 255, 0);
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -604,14 +613,14 @@ a{
     width: 400px;
 }
 .pub_sect_txt_destxt{
-    border: 2px solid blue;
+    
     border-radius: 10px;
     height: 150px;
     width: 350px;
 }
 
 .pub_sect_txt_desbtn{
-    border: 2px solid red;
+    border: 2px solid #7fca07;
     background-color: #91C936;
     font-size: 1.2em;
     border-radius: 10px;
@@ -815,14 +824,14 @@ a{
 position: relative;
 }
 .apropos_cont_imgtxt{
-    border: 2px solid red;
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 350px;
 }
 .apropos_imgulls{
-    border: 2px solid green;
+    
     background-color: red;
     background: url('./img_library/IMG.webp') 100% no-repeat;
     background-size: cover;
@@ -846,7 +855,7 @@ position: relative;
     margin-right: 200px;
 }
 .aproposfond{
-    border: 2px solid green;
+    
     height: 320px;
     display: flex;
     flex-direction: column;
@@ -854,14 +863,14 @@ position: relative;
     align-items: center;
 }
 .apropos_imgfond{
-    border: 2px solid red;
+    
     background-image: url('./img_library/avatar-1299805_960_720.png');
     background-size: cover;
     height: 250px;
     width: 250px;
 }
 .apropos_nomfond_cont{
-    border: 2px solid blue;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -23,9 +23,26 @@
         </nav>
     </header>
     <main class="panier_main">
-        <section class="">
-            <div class=""></div>
-        </section>
+        {% for pub in pubs %}
+        <div class="pub_sect_cont">
+            <div class="pub_sect_toil">
+                <img src="{{ url_for('static', filename='uploads/' + pub.filename) }}" class="pub_sect_img_upl" alt="">
+                <button class="pub_sect_btnaff">Afficher</button>
+            </div>
+            <div class="pub_sect_cont_txt">
+                <p class="pub_sect_txt_nom">Nom : <span class="pub_sect_txt_nomval">{{ pub.namepainter }}</span></p>
+                <p class="pub_sect_txt_prix">Prix : <span class="pub_sect_txt_prixval">{{ pub.price }}</span></p>
+                <div class="pub_sect_cont_des">
+                    <p class="pub_sect_txt_des">Description :</p>
+                    <div class="pub_sect_cont_desbtntxt">
+                        <div class="pub_sect_txt_destxt">{{ pub.description }}</div>
+                        <button class="pub_sect_txt_desbtn">Acheter</button>
+                        <button class="pub_sect_txt_desbtn">Panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </main>
 </body>
 <footer>
