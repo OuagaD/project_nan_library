@@ -41,6 +41,17 @@ class User(db.Model):
         self.contact = contact
         self.password = password
 
+
+
+with app.app_context():
+    try:
+        db.create_all()
+    except Exception as e:
+        print("Erreur creation")
+
+
+
+
 class Pic(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     pic = db.Column(db.LargeBinary)
@@ -49,6 +60,16 @@ class Pic(db.Model):
     def __init__(self, pic, name):
         self.pic = pic
         self.name = name
+
+
+
+with app.app_context():
+    try:
+        db.create_all()
+    except Exception as e:
+        print("Erreur creation")
+
+
 
 class Myspace(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -67,6 +88,13 @@ class Myspace(db.Model):
         self.mail = mail
         self.filename = filename
         
+with app.app_context():
+    try:
+        db.create_all()
+    except Exception as e:
+        print("Erreur creation")
+
+
 
 class Basket(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -80,7 +108,10 @@ class Basket(db.Model):
 
 
 with app.app_context():
-    db.create_all()
+    try:
+        db.create_all()
+    except Exception as e:
+        print("Erreur creation")
 
     
 @app.route('/')
