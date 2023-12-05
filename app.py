@@ -300,7 +300,7 @@ def monespace():
     return render_template('monespace.html', spaces=spaces)
 
 #Soumettre des elements dans la db Myspace
-@app.route('/soumettre', methods=['GET', 'POST'])
+@app.route('/soumettre', methods=['POST'])
 def soumettre(): 
     if request.method == 'POST':
         namepainter= request.form.get('nompein')
